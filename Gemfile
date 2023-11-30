@@ -66,6 +66,8 @@ group :development, :test do
   gem 'shoulda-matchers', '~> 5.0'
 
   gem 'faker'
+
+  gem 'cpf_faker'
 end
 
 group :development do
