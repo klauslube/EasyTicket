@@ -68,6 +68,10 @@ group :development, :test do
   gem 'faker'
 
   gem 'cpf_faker'
+
+  gem "capybara"
+
+  gem "selenium-webdriver"
 end
 
 group :development do
