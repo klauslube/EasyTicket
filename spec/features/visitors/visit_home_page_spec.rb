@@ -4,7 +4,7 @@ describe 'Visitors' do
   context 'visit home page' do
     it 'Successfully' do
       visit '/'
-      expect(page).to have_content('Olá')
+      expect(page).to have_content('Iniciar Atendimento')
     end
   end
 end
