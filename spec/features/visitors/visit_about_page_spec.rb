@@ -4,7 +4,8 @@ describe 'Visitors' do
   context 'visit home page' do
     it 'Successfully' do
       visit '/'
-      expect(page).to have_content('Olá')
+      click_on 'Sobre Mim'
+      expect(page).to have_content('Sobre Mim')
     end
   end
 end
