@@ -3,11 +3,11 @@ require 'rails_helper'
 describe CustomerService do 
   context 'validations' do
     it { should validate_presence_of(:code) }
-    it { should validate_presence_of(:type) }
+    it { should validate_presence_of(:service_type) }
     it { should validate_presence_of(:medical_service_type) }
     # TODO: it { should belong_to(:customer) }
     it do
-      should define_enum_for(:type).
+      should define_enum_for(:service_type).
       with_values(default: 5, preferential: 10)
     end
     

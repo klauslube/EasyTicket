@@ -1,0 +1,16 @@
+<%= form_with(model: @customer_service) do |form| %>
+  <%# <%= form.submit "Atendimento Padrão", name: 'service_type', value: 'padrao', class: 'btn btn-primary' %>
+  <%# <%= form.submit "Atendimento Preferencial", name: 'service_type', value: 'preferencial', class: 'btn btn-primary' %>
+  <%= form.hidden_field :service_type, value: 'default' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Atendimento Padrão' %>
+  </div>
+<% end %>
+<%= form_with(model: @customer_service) do |form| %>
+  <%# <%= form.submit "Atendimento Padrão", name: 'service_type', value: 'padrao', class: 'btn btn-primary' %>
+  <%# <%= form.submit "Atendimento Preferencial", name: 'service_type', value: 'preferencial', class: 'btn btn-primary' %>
+  <%= form.hidden_field :service_type, value: 'preferential' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Atendimento Preferencial' %>
+  </div>
+<% end %>
