@@ -3,5 +3,10 @@ Rails.application.routes.draw do
 
   get '/about', to: 'home#about'
 
-  resources :customer_services
+  resources :customer_services, expect: %i[create edit] do
+    collection do
+      post '/initiate', to: 'customer_services#initiate'
+      # post '/refine', to: 'customer_services#refine'
+    end
+  end
 end

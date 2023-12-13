@@ -5,14 +5,15 @@ describe 'Visitors' do
     it 'Successfully' do
       visit '/'
       click_on 'Iniciar Atendimento'
-      expect(page).to have_content 'Atedimento Preferencial'
-      expect(page).to have_content 'Atedimento Padrão'
+      expect(page.body).to include('Atendimento Preferencial')
+      expect(page.body).to include('Atendimento Padrão')
     end
     it 'Create customer service successfully' do
-      visit '/customer_services'
+      visit '/'
+      click_on 'Iniciar Atendimento'
       click_on 'Atendimento Padrão'
       click_on 'Clínico Geral'
-      expect(page).to have_content 'Sua senha é: '
+      expect(page.body).to include('Sua senha é: ')
     end
   end
 end
