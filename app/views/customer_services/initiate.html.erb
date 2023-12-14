@@ -1,0 +1,14 @@
+<%= form_with(model: @customer_service) do |form| %>
+  <%= form.hidden_field :service_type, value: @customer_service_params[:service_type] %>
+  <%= form.hidden_field :medical_service_type, value: 'general' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Clínico Geral' %>
+  </div>
+<% end %>
+<%= form_with(model: @customer_service) do |form| %>
+  <%= form.hidden_field :service_type, value: @customer_service_params[:service_type] %>
+  <%= form.hidden_field :medical_service_type, value: 'specialist' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Especialista' %>
+  </div>
+<% end %>

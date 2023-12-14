@@ -1,0 +1,12 @@
+<%= form_with(model: @customer_service, url: initiate_customer_services_path, data: { turbo: false }) do |form| %>
+  <%= form.hidden_field :service_type, value: 'default' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Atendimento Padrão' %>
+  </div>
+<% end %>
+<%= form_with(model: @customer_service, url: initiate_customer_services_path, data: { turbo: false }) do |form| %>
+  <%= form.hidden_field :service_type, value: 'preferential' %>
+  <div class='btn btn-primary'>
+    <%= form.submit 'Atendimento Preferencial' %>
+  </div>
+<% end %>
