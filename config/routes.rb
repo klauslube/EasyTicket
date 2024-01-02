@@ -9,4 +9,8 @@ Rails.application.routes.draw do
       # post '/refine', to: 'customer_services#refine'
     end
   end
+
+  resources :customers
+
+  get '/dashboard', to: 'dashboard#index'
 end
