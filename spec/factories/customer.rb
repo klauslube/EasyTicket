@@ -8,4 +8,6 @@ FactoryBot.define do
     telephone { Faker::PhoneNumber.cell_phone }
     health_care_number { 123 } # Faker::Number.number(digits: 1) }
   end
+
+  trait :customer
 end
