@@ -1,5 +1,5 @@
 class CustomersController < ApplicationController
-  before_action :fetch_customer, only: %i[show]
+  before_action :fetch_customer, only: %i[show edit update]
 
   def index
     @customers = Customer.all
@@ -19,6 +19,13 @@ class CustomersController < ApplicationController
   end
 
   def edit; end
+
+  def update 
+    return redirect_to dashboard_path(cpf: @customer.cpf),
+    notice: 'Cadastro Atualizado com sucesso' if @customer.update(customer_params)
+
+    render :edit
+  end
 
   private
 

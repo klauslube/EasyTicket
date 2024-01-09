@@ -21,8 +21,10 @@
           <td><%= customer.telephone %></td>
           <td><%= customer.address %></td>
           <td><%= customer.health_care_number %></td>
+          <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
         </tr>
       </tbody>
     </table>
   <% end %>
+  <%= link_to 'Voltar', '/dashboard' %>
 </div>

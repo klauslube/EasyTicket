@@ -1,1 +1,8 @@
 require: rubocop-rails
+
+AllCops:
+  Exclude:
+    - '**/*.rb'
+
+Metrics/LineLength:
+  Enabled: false
