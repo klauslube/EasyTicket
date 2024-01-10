@@ -36,6 +36,7 @@ describe 'Update visitor' do
 
       click_on 'Atualizar'
 
+      
       expect(page).to have_content("Name can't be blank")
     end
   end
