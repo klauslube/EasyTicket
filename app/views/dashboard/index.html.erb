@@ -1,0 +1,20 @@
+<h1>DashBoard</h1>
+<div>
+  <%= link_to 'Registro de Visitante', new_customer_path %>
+  <%= link_to 'Todos os Visitantes', customers_path %>
+</div>
+<div>
+  <%= form_with(url: '#') do |form| %>
+    <p>
+      <%= form.label 'Cliente(cpf)' %>
+      <%= form.text_field 'cpf', value: @cpf %>
+    </p>
+    <p>
+      <%= form.label 'Cliente(codigo)' %>
+      <%= form.text_field 'code', value: @code %>
+    </p>
+    <p>
+      <%= form.submit 'Atrelar Atendimento', disabled: @cpf.blank? %>
+    </p>
+  <% end %>
+</div>

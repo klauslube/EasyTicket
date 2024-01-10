@@ -1,0 +1,30 @@
+<div>
+  <table>
+    <thead>
+      <tr>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Idade</th>
+        <th>Cpf</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Número do plano de saúde</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% @customers.each do |customer| %>
+        <tr>
+          <td><%= customer.name %></td>
+          <td><%= customer.email %></td>
+          <td><%= customer.age %></td>
+          <td><%= customer.cpf %></td>
+          <td><%= customer.telephone %></td>
+          <td><%= customer.address %></td>
+          <td><%= customer.health_care_number %></td>
+          <td><%= link_to 'Editar', edit_customer_path(customer) %></td>
+        </tr>
+      </tbody>
+    </table>
+  <% end %>
+  <%= link_to 'Voltar', '/dashboard' %>
+</div>
